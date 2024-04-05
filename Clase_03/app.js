@@ -1,6 +1,12 @@
-const modulo = require('./utiles');
-const fs = require('fs/promises');
-const os = require('os');
+/*
+    const modulo = require('./utiles');
+    const fs = require('fs/promises');
+    const os = require('os');
+*/
+import * as modulo from './utiles.js';
+import fs from 'fs/promises';
+import os from 'os';
+
 
 console.log('Plataforma '+ os.platform() );
 console.log('CPU ' + os.cpus().length);

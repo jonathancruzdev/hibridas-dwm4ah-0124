@@ -1,9 +1,9 @@
-const mostrar = (data) => {
+export const mostrar = (data) => {
     console.table(data);
 }
 
 
 
-module.exports = {
+/* module.exports = {
     mostrar: mostrar
-}
+} */
