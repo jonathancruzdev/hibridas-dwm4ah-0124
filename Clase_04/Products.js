@@ -14,15 +14,15 @@ class ProductsManager {
     
     constructor(){
         this.list = [];
-
     }
     // Lee el Json Local y los asigna al list;
     readJSON(){
 
     }
     // Guarda en formato JSON el arreglo this.list
-    saveJSON(){
-
+    async saveJSON(){
+        const dataString = JSON.stringify( this.list);
+        await fs.writeFile( this.path, dataString, null, 2 );
     }
     // {id: 1 , name: 'Tv32', price: 123}
     addProduct( product ){
@@ -58,3 +58,5 @@ class ProductsManager {
 }
 
 // 1. Exportar
+
+export { ProductsManager } 
