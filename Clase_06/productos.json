@@ -1,0 +1,7 @@
+{
+    "data": [
+        { "id": 1, "name": "Mate", "price": 500},
+        { "id": 2, "name": "Termo WaterDog", "price": 1500},
+        { "id": 3, "name": "Mouse", "price": 450}
+    ]
+}
