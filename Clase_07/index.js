@@ -1,5 +1,5 @@
 import express from "express";
-import routerAPI from "routes/index.js";
+import  { routerAPI } from "./routes/index.js";
 const app = express();
 const port = 3000;
 

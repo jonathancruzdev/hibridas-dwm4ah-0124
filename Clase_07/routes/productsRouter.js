@@ -1,7 +1,8 @@
 import express from "express";
 
-export const router = express.Router();
+const router = express.Router();
 
+router.use( express.json());
 
 // Retorna todos los productos
 router.get('/', async (req, res) => {
@@ -37,3 +38,4 @@ router.delete('/:id', (req, res) => {
     res.status(200).json(  {msg: id} );
 })
 
+export default router;

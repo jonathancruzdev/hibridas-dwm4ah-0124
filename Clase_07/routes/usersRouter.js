@@ -1,6 +1,7 @@
 import express from "express";
 
-export const router = express.Router();
+const router = express.Router();
+router.use( express.json());
 
 router.get('/', (req, res) => {
     console.log('GET Users')
@@ -18,7 +19,9 @@ router.post('/', (req, res) => {
     res.status(200).json( { msg: 'POST USERS'})
 })
 
-router.delete('/:id', (res, res) => {
+router.delete('/:id', (req, res) => {
     console.log('DELETE Users')
     res.status(200).json( { msg: 'DELETE USERS'})
 })
+
+export default router;
