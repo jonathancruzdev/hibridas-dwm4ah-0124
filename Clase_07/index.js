@@ -1,4 +1,5 @@
 import express from "express";
+import routerAPI from "routes/index.js";
 const app = express();
 const port = 3000;
 
@@ -9,26 +10,8 @@ app.get('/', (req, res) => {
     res.status(200).send('<h1> CRUD de Productos </h1>');
 })
 
-// Retorna todos los productos
-app.get('/products', async (req, res) => {
-    console.log('GET: Products');
-
-    res.status(200).json(  {} );
-})
-// Retorna Producto por ID
-app.get('/products/:id', async (req, res) => {
-    const id = req.params.id;
-    console.log('GET: Product ID ' + id);
-    res.status(200).json(  {id} );
-
-})
-
-// Agregar un Producto
-app.post('/products', (req, res) => {
-    const product = req.body;
-    res.status(200).json(  product );
-    console.log('POST: Products', product)
-})
+// Llamo al RouterAPI y le paso la aplicación
+routerAPI(app);
 
 
 app.listen( 3000, () =>{
