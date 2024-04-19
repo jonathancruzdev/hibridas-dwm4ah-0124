@@ -5,8 +5,16 @@
     ],
 
     "products": [
-        { "id": 1, "name": "Mate", "price": 500},
-        { "id": 2, "name": "Termo WaterDog", "price": 1500},
-        { "id": 3, "name": "Mouse", "price": 450}
+        { "id": 1, "name": "Mate", "price": 500, "category_id": 1 },
+        { "id": 2, "name": "Termo WaterDog", "price": 1500, "category_id": 1 },
+        { "id": 3, "name": "Mouse", "price": 450, "category_id": 2 }
+    ],
+    "categorys": [
+        { "id": 1, "name": "Computación"},
+        { "id": 2, "name": "Accesorios"}
+    ],
+    "carts": [
+        {"id": 1, "user_id": 1 }
     ]
+
 }
