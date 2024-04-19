@@ -1,0 +1,12 @@
+{
+    "users": [
+        {"id": 1, "name": "John", "email": "john.do@mail.com", "password": "123abc"},
+        {"id": 2, "name": "Jane", "email": "jane.do@mail.com", "password": "123abc456"}
+    ],
+
+    "products": [
+        { "id": 1, "name": "Mate", "price": 500},
+        { "id": 2, "name": "Termo WaterDog", "price": 1500},
+        { "id": 3, "name": "Mouse", "price": 450}
+    ]
+}
