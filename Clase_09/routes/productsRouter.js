@@ -1,5 +1,5 @@
 import express from "express";
-import { createProduct, getProducts, getProductsById } from "../controllers/productController.js";
+import { createProduct, getProducts, getProductById, deleteProductById, updateProductById } from "../controllers/productController.js";
 const router = express.Router();
 
 router.use( express.json());
@@ -8,15 +8,15 @@ router.use( express.json());
 router.get('/', getProducts)
 
 // Retorna el producto por ID
-router.get('/:id', getProductsById)
+router.get('/:id', getProductById)
 
 // Agregar un Producto
 router.post('/', createProduct)
 
 // Actualizar Producto
-//router.put('/', updateProduct)
+router.put('/:id', updateProductById)
 
 // Eliminar Productos
-//router.delete('/:id', deleteProduct)
+router.delete('/:id', deleteProductById)
 
 export default router;
