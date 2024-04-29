@@ -1,0 +1,28 @@
+{
+    "usuarios": [
+        { "id": 1, "name": "Juan"}
+    ],
+    "herramientas": [
+        {"id":1, "nombre": "Martillo", "id_categorias": 1, "Publicado": true, "categorias": "Manuales"}
+    ],
+    "publicacion": [
+        { "zona": "Bs As", "medio pago": "" , "id_herramientas": 1, "id_usario": 2  }
+    ],
+    "categorias": [
+        {"id": 1, "name": "Manuales" },
+        {"id": 2, "name":  "Electricas"}
+    ],
+    "alquiler": [
+        { "id": 1, "retio": "22-04-24", "entrega": "01-05-24", "status": "Pendiente"}
+    ],
+    "calificaciones": [
+
+    ],
+    "comentarios": [
+
+    ],
+    "MEdios de Pago":[
+
+    ]
+
+}
