@@ -9,7 +9,6 @@ function App() {
   let logueado = true;
   const inputRef = useRef(null);
   const [ lista, setLista ] = useState(['Jose', 'Carlos'])
-  //const lista = ['José', 'María'];
 
   /*
     - Recibe el valor inicial;
@@ -33,11 +32,10 @@ function App() {
     let nombre =  inputRef.current.value;
 
     console.log(nombre);
+    // Agrego lo que la lista tenia anteriormente y le sumo el nuevo valor
+    setLista( [...lista, nombre]  );
 
-    //console.log( lista);
-    //lista.push(nombre)
-    //setLista(   lista  )
-  
+    
     // limpio el valor
     inputRef.current.value = '';
 
