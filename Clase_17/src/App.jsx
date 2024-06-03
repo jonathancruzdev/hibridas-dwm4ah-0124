@@ -8,18 +8,14 @@ import Post from './components/Post'
 function App() {
   const [posts, setPost] = useState([]);
   const [ filtro, setFiltro] = useState('');
-
   const [ loading, setLoading] = useState(true);
-
   // funcion que se ejecuta, array de dependencia
   useEffect(  () => {
     fetchAPI();
-
-
   }, [filtro] )
 
   const fetchAPI = async () => {
-    const endPoint = 'https://jsonplaceholder.typicode.com/posts';
+    const endPoint = 'http://localhost:3000/users';
     const response = await fetch( endPoint );
     const data = await response.json();
 
@@ -40,7 +36,6 @@ function App() {
         </a>
       </div>
       <h1>useEffect</h1>
-   
     
       <hr />
 
@@ -49,9 +44,6 @@ function App() {
           <Post title={post.title} body={post.body} id={2} />
         ) )
       }
-
-      
-
 
       <p className="read-the-docs">
         Aplicaciones Híbridas
