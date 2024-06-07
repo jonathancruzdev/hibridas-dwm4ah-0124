@@ -1,9 +1,11 @@
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors";
 import { routerAPI }  from "./routes/index.js";
 const app = express();
 const port = 3000;
-
+// Permito acceso remotos a la API
+app.use( cors() );
 mongoose.connect( 'mongodb://127.0.0.1:27017/blog', {});
 
 const db = mongoose.connection;
