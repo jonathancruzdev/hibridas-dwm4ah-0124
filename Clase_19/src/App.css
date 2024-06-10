@@ -18,6 +18,29 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+nav {
+  background-color: #646cffaa;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+nav ul li a {
+  color: white;
+}
+
+.card {
+  border: 2px solid thistle;
+}
+
+.card img {
+  width: 90%;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

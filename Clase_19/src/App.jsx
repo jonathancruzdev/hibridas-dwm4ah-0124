@@ -1,32 +1,43 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import Home from './components/Home'
+import Products from './components/Products'
+import Contact from './components/Contact'
+import NoFound from './components/NotFound'
+import Details from './components/Details'
 import './App.css'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
+
+      <h1>React Rotuer DOM</h1>
+      
+      <BrowserRouter>
+        <nav>
+          <ul>
+            <li> <Link to="/"> Inicio  </Link></li>
+            <li> <Link to="/products"> Productos</Link></li>
+            <li> <Link to="/contact"> Contactos</Link></li>
+          </ul>
+        </nav>
+        {/* Es el área donde se va a mostrar los componentes  */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={ <Products />} />
+          <Route path='products/:id' element={ <Details />} />
+          <Route path='/contact' element={ <Contact />} />
+          <Route path='*' element={ <NoFound /> } />
+        </Routes>
+
+      </BrowserRouter>
+
+
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Aplicaciones Híbridas 2024
       </p>
     </>
   )
