@@ -1,9 +1,8 @@
-# React Router DOM
+# React Router - Rutas Protegida
 
-- Rutas (Routes): Define el componente que debe renderizase
-- Enrutador ( Router): Un componente que envuelve a las rutas
-- Enlaces ( Link): Desde donde voy a poder navegar
-
+- Creamos el Provider ✔
+- Creamos el componte las Rutas Protegidas ✔
+- Modificando las Router
 
 ** En App.js**
 ``` js
